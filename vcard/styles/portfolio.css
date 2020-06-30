@@ -1,0 +1,313 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******************************
+
+[Table of Contents]
+
+1. Fonts
+2. Body and some general stuff
+3. Header
+4. Content
+5. Menu
+6. Portfolio
+
+
+******************************/
+
+/***********
+1. Fonts
+***********/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,900');
+
+/*********************************
+2. Body and some general stuff
+*********************************/
+
+
+.content_container
+{
+	width: 100%;
+	height: 100%;
+}
+
+/*********************************
+4. Content
+*********************************/
+
+.main_content_outer
+{
+	width: 100%;
+	height: 100%;
+	background: #f5f0f0;
+	overflow: hidden;
+}
+
+.main_content
+{
+	width: calc(100% - 473px);
+	height: 100%;
+	padding-left: 82px;
+	padding-right: 30px;
+}
+.main_title_container
+{
+	width: 100%;
+	height: 183px;
+}
+.main_subtitle
+{
+	font-size: 18px;
+	font-weight: 500;
+	color: #7a798c;
+	line-height: 0.75;
+}
+.main_title
+{
+	font-size: 72px;
+	font-weight: 800;
+	color: #100f3a;
+	line-height: 0.75;
+	margin-top: 15px;
+	margin-left: -4px;
+}
+.main_content_scroll
+{
+	margin-top: 62px;
+	max-height: calc(100% - 183px - 93px - 62px);
+}
+.mCS-minimal.mCSB_scrollTools .mCSB_draggerRail, .mCS-minimal-dark.mCSB_scrollTools .mCSB_draggerRail
+{
+	background: #FFFFFF;
+}
+.mCS-minimal-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+{
+	width: 3px;
+	background: #8583e1;
+}
+
+/*********************************
+5. Menu
+*********************************/
+
+.menu
+{
+	display: none;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 250px;
+	height: 430px;
+	background: #FFFFFF;
+	z-index: 100;
+	-webkit-transition: all 600ms ease;
+	-moz-transition: all 600ms ease;
+	-ms-transition: all 600ms ease;
+	-o-transition: all 600ms ease;
+	transition: all 600ms ease;
+}
+.header.scrolled .menu.active
+{
+	bottom: -360px;
+}
+.menu.active
+{
+	bottom: -323px;
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+}
+.menu_content
+{
+	width: 100%;
+	height: 100%;
+	padding-top: 10px;
+}
+.menu_nav
+{
+	padding-right: 40px;
+	padding-top: 35px;
+}
+.menu_nav ul li
+{
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transform: translateY(-20px);
+	-moz-transform: translateY(-20px);
+	-ms-transform: translateY(-20px);
+	-o-transform: translateY(-20px);
+	transform: translateY(-20px);
+	-webkit-transition: all 1000ms ease;
+	-moz-transition: all 1000ms ease;
+	-ms-transition: all 1000ms ease;
+	-o-transition: all 1000ms ease;
+	transition: all 1000ms ease;
+}
+.menu.active .menu_nav ul li
+{
+	visibility: visible;
+	opacity: 1;
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+	-ms-transform: translateY(0px);
+	-o-transform: translateY(0px);
+	transform: translateY(0px);
+}
+.menu_nav ul li:not(:last-child)
+{
+	margin-bottom: 8px;
+}
+.menu_nav ul li a
+{
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #100f3a;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.menu_nav ul li a:hover
+{
+	color: #8583e1;
+}
+.hamburger
+{
+	position: absolute;
+	right: 38px;
+	bottom: 14px;
+	cursor: pointer;
+	margin-right: 3px;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #100f3a;
+	letter-spacing: 0.05em;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.hamburger:hover
+{
+	color: #7a798c;
+}
+
+/*********************************
+6. Portfolio
+*********************************/
+
+.portfolio_categories
+{
+	margin-top: 20px;
+}
+.portfolio_category
+{
+	display: inline-block;
+	cursor: pointer;
+	font-size: 18px;
+	font-weight: 600;
+	color: #838383;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.portfolio_category:not(:last-child)
+{
+	margin-right: 41px;
+}
+.portfolio_category:hover,
+.portfolio_category.active
+{
+	color: #100f3a;
+}
+.portfolio_grid
+{
+	width: 100%;
+}
+.portfolio_item
+{
+	width: calc((100% - 279px) / 3);
+	float: left;
+	margin-bottom: 50px;
+	margin-right: 93px;
+	background: #100f3a;
+}
+.portfolio_item::after
+{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(16,15,58,0.74);
+	content: '';
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.portfolio_item:hover::after
+{
+	visibility: visible;
+	opacity: 1;
+}
+.portfolio_item img
+{
+	max-width: 100%;
+}
+.mCSB_outside + .mCS-minimal.mCSB_scrollTools_vertical, .mCSB_outside + .mCS-minimal-dark.mCSB_scrollTools_vertical
+{
+	margin-top: 0;
+}
+.portfolio_item_content
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	z-index: 10;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.portfolio_item_title
+{
+	font-size: 18px;
+	font-weight: 600;
+	color: #FFFFFF;
+	line-height: 1.2;
+	margin-top: 30px;
+}
+.portfolio_item_link
+{
+	margin-top: 7px;
+}
+.portfolio_item_link a
+{
+	font-size: 12px;
+	font-weight: 500;
+	color: #FFFFFF;
+}
+.portfolio_item:hover .portfolio_item_content
+{
+	visibility: visible;
+	opacity: 1;
+}
