@@ -405,7 +405,8 @@ section
 {
 	width: 473px;
 	height: 100%;
-	background: #100f3a;
+	background: #3f3ba4;
+
 	
 	
 
@@ -413,7 +414,8 @@ section
 .general_info_image
 {
 	width: 100%;
-	height: 73px;
+	height: 100%;
+
 	
 	
 }
@@ -421,11 +423,10 @@ section
 {
 	width: 100%;
 	height: 100%;
-	padding-left: 77px;
-	padding-top: 0px;
-	padding-right: 15px;
-	padding-bottom: 20px;
-	overflow: hidden;
+	padding: 5%;
+	/* overflow: hidden; */
+	align-content: space-between;
+
 	
 }
 .general_info_content_inner
