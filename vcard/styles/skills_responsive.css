@@ -20,6 +20,19 @@
 13. 400px
 
 ******************************/
+/************
+1. 1920px
+************/
+
+@media only screen and ( min-width: 1620px)
+{
+	.img_badge{
+		width:450px;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+
+}
 
 /************
 1. 1600px
@@ -75,7 +88,7 @@
 
 @media only screen and (max-width: 1380px)
 {
-	.milestone
+	.certificates
 	{
 		width: 50%;
 		margin-bottom: 60px;
@@ -141,7 +154,7 @@
 	{
 		font-size: 24px;
 	}
-	.milestones
+	.certificates
 	{
 		padding-bottom: 30px;
 	}
@@ -242,7 +255,7 @@
 	{
 		padding-right: 30px;
 	}
-	.milestone
+	.certificates
 	{
 		width: 100%;
 	}
